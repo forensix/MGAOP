@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'MGAOP' target in the 'MGAOP' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+#endif

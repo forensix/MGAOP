@@ -1,0 +1,214 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ECB4F0A01376F76C007D6618 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECB4F09F1376F76C007D6618 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		ECB4F09C1376F76C007D6618 /* libMGAOP.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMGAOP.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECB4F09F1376F76C007D6618 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		ECB4F0A31376F76C007D6618 /* MGAOP-Prefix.pch */ = {isa = PBXFileReference; path = "MGAOP-Prefix.pch"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ECB4F0991376F76C007D6618 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECB4F0A01376F76C007D6618 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ECB4F0911376F76C007D6618 = {
+			isa = PBXGroup;
+			children = (
+				ECB4F0A11376F76C007D6618 /* MGAOP */,
+				ECB4F09E1376F76C007D6618 /* Frameworks */,
+				ECB4F09D1376F76C007D6618 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ECB4F09D1376F76C007D6618 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ECB4F09C1376F76C007D6618 /* libMGAOP.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ECB4F09E1376F76C007D6618 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ECB4F09F1376F76C007D6618 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ECB4F0A11376F76C007D6618 /* MGAOP */ = {
+			isa = PBXGroup;
+			children = (
+				ECB4F0A21376F76C007D6618 /* Supporting Files */,
+			);
+			path = MGAOP;
+			sourceTree = "<group>";
+		};
+		ECB4F0A21376F76C007D6618 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ECB4F0A31376F76C007D6618 /* MGAOP-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		ECB4F09A1376F76C007D6618 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		ECB4F09B1376F76C007D6618 /* MGAOP */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ECB4F0A61376F76C007D6618 /* Build configuration list for PBXNativeTarget "MGAOP" */;
+			buildPhases = (
+				ECB4F0981376F76C007D6618 /* Sources */,
+				ECB4F0991376F76C007D6618 /* Frameworks */,
+				ECB4F09A1376F76C007D6618 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MGAOP;
+			productName = MGAOP;
+			productReference = ECB4F09C1376F76C007D6618 /* libMGAOP.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ECB4F0931376F76C007D6618 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "TDSoftware GmbH";
+			};
+			buildConfigurationList = ECB4F0961376F76C007D6618 /* Build configuration list for PBXProject "MGAOP" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = ECB4F0911376F76C007D6618;
+			productRefGroup = ECB4F09D1376F76C007D6618 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ECB4F09B1376F76C007D6618 /* MGAOP */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ECB4F0981376F76C007D6618 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		ECB4F0A41376F76C007D6618 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		ECB4F0A51376F76C007D6618 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		ECB4F0A71376F76C007D6618 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DSTROOT = /tmp/MGAOP.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MGAOP/MGAOP-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		ECB4F0A81376F76C007D6618 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DSTROOT = /tmp/MGAOP.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MGAOP/MGAOP-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ECB4F0961376F76C007D6618 /* Build configuration list for PBXProject "MGAOP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECB4F0A41376F76C007D6618 /* Debug */,
+				ECB4F0A51376F76C007D6618 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ECB4F0A61376F76C007D6618 /* Build configuration list for PBXNativeTarget "MGAOP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECB4F0A71376F76C007D6618 /* Debug */,
+				ECB4F0A81376F76C007D6618 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ECB4F0931376F76C007D6618 /* Project object */;
+}
