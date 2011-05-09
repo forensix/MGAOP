@@ -1,5 +1,5 @@
 // -----------------------------------------------------------------------------
-//  DemoAspectsAppDelegate_iPhone.h
+//  AOPNilValue.m
 //  MGAOP
 //
 //  MGAOP is available under *either* the terms of the modified BSD license
@@ -9,11 +9,13 @@
 //  Copyright (c) 2011, Manuel Gebele.
 // -----------------------------------------------------------------------------
 
-#import <UIKit/UIKit.h>
-#import "DemoAspectsAppDelegate.h"
+#import "AOPNilValue.h"
 
-@interface DemoAspectsAppDelegate_iPhone : DemoAspectsAppDelegate {
-    
+@implementation AOPNilValue
+
++ (AOPNilValue *)nilValue
+{
+    return [[[self alloc] init] autorelease];
 }
 
 @end

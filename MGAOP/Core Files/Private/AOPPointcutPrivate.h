@@ -1,5 +1,5 @@
 // -----------------------------------------------------------------------------
-//  DemoAspectsAppDelegate_iPhone.h
+//  AOPPointcutPrivate.h
 //  MGAOP
 //
 //  MGAOP is available under *either* the terms of the modified BSD license
@@ -9,11 +9,14 @@
 //  Copyright (c) 2011, Manuel Gebele.
 // -----------------------------------------------------------------------------
 
-#import <UIKit/UIKit.h>
-#import "DemoAspectsAppDelegate.h"
+#import <Foundation/Foundation.h>
 
-@interface DemoAspectsAppDelegate_iPhone : DemoAspectsAppDelegate {
-    
-}
+@protocol AOPPointcutPrivate
+
++ (void)printInvalidClassPatternDetected:(NSString *)pattern;
++ (void)printInvalidMethodPatternDetected:(NSString *)pattern;
+
++ (NSArray *)classesForPatterns:(NSArray *)patterns;
++ (NSArray *)methodsForClasses:(NSArray *)classes andPatterns:(NSArray *)patterns;
 
 @end

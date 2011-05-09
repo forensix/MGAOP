@@ -1,22 +1,137 @@
-//
+// -----------------------------------------------------------------------------
 //  DemoAspectsAppDelegate.m
-//  DemoAspects
+//  MGAOP
 //
-//  Created by Manuel Gebele on 08.05.11.
-//  Copyright 2011 TDSoftware GmbH. All rights reserved.
-//
+//  MGAOP is available under *either* the terms of the modified BSD license
+//  *or* the MIT License (2008). See http://opensource.org/licenses/alphabetical
+//  for full text.
+// 
+//  Copyright (c) 2011, Manuel Gebele.
+// -----------------------------------------------------------------------------
 
 #import "DemoAspectsAppDelegate.h"
 
+#import "SimpleSampleClass.h"
+#import "TimeSampleClass.h"
+#import "IllegalArgumentClass.h"
+#import "IllegalArgumentAspect.h"
+
+#undef  SAMPLE1
+#undef  SAMPLE2
+#define SAMPLE3
+
 @implementation DemoAspectsAppDelegate
 
+@synthesize window = _window;
 
-@synthesize window=_window;
-
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+- (AOPRuntime *)initAOPRuntime
 {
-    // Override point for customization after application launch.
+    return [AOPRuntime sharedRuntime];
+}
+
+
+- (void)sample1
+{
+    AOPRuntime *runtime = [self initAOPRuntime];
+    
+    NSString *classPattern = @"SimpleSampleClass";
+    NSString *methodPattern = @"initWith.+:";
+    
+    AOPAspect *loggingAspect
+    = [AOPAspectCreator
+       aspectOfType:kAOPAspectTypeLogging
+       classPattern:classPattern
+       methodPattern:methodPattern];
+    
+    [runtime declareAspect:loggingAspect];
+}
+
+
+- (void)sample2
+{
+    AOPRuntime *runtime = [self initAOPRuntime];
+    
+    NSString *classPattern = @"TimeSampleClass";
+    NSString *methodPattern = @"timeSampleMethod.*";
+    
+    AOPAspect *timeProfilingAspect
+    = [AOPAspectCreator
+       aspectOfType:kAOPAspectTypeTimeProfiling
+       classPattern:classPattern
+       methodPattern:methodPattern];
+    
+    [runtime declareAspect:timeProfilingAspect];
+}
+
+
+- (void)sample3
+{
+    AOPRuntime *runtime = [self initAOPRuntime];
+    
+    NSString *classPattern = @"IllegalArgumentClass";
+    NSString *methodPattern = @".*"; // All methods
+    
+    IllegalArgumentAspect *illegalArgumentAspect
+    = [IllegalArgumentAspect
+       illegalArgumentAspectForClassPattern:classPattern
+       methodPattern:methodPattern];
+    
+    [runtime declareAspect:illegalArgumentAspect];
+}
+
+
+- (void)initAOPSamples
+{
+#ifdef SAMPLE1
+    [self sample1];
+    
+    (void)[[[SimpleSampleClass alloc] initWithString:@"SAMPLE1"]
+           autorelease];
+    (void)[[[SimpleSampleClass alloc] initWithNumber:[NSNumber numberWithInt:12]]
+           autorelease];
+#endif
+    
+#ifdef SAMPLE2
+    [self sample2];
+    
+    TimeSampleClass *timeSampleClass
+    = [[[TimeSampleClass alloc] init] autorelease];
+    
+    [timeSampleClass timeSampleMethod1];
+    [timeSampleClass timeSampleMethod2];
+#endif
+    
+#ifdef SAMPLE3
+    [self sample3];
+    
+    IllegalArgumentClass *illegalArgumentClass
+    = [[[IllegalArgumentClass alloc] init] autorelease];
+    
+    [illegalArgumentClass addArgument:@"LegalArgument"];
+    
+    id illegalArgument = nil;
+    [illegalArgumentClass addArgument:illegalArgument];
+    
+    NSArray *legalArguments = [NSArray arrayWithObjects:@"1", @"2", @"3", nil];
+    [illegalArgumentClass addArguments:legalArguments];
+    
+    NSArray *illegalArguments = nil;
+    [illegalArgumentClass addArguments:illegalArguments];
+    
+    [illegalArgumentClass convertArgumentsBeforeAdding:illegalArguments];
+    
+#endif
+    
+}
+
+
+- (BOOL)              application:(UIApplication *)application
+    didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    [self initAOPSamples];
+    
     [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

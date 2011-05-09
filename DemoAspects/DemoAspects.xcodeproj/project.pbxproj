@@ -17,25 +17,59 @@
 		EC3EA299137708AD009ABDF7 /* MainWindow_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC3EA297137708AD009ABDF7 /* MainWindow_iPhone.xib */; };
 		EC3EA29D137708AD009ABDF7 /* DemoAspectsAppDelegate_iPad.m in Sources */ = {isa = PBXBuildFile; fileRef = EC3EA29C137708AD009ABDF7 /* DemoAspectsAppDelegate_iPad.m */; };
 		EC3EA2A0137708AD009ABDF7 /* MainWindow_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC3EA29E137708AD009ABDF7 /* MainWindow_iPad.xib */; };
+		EC8078991377F5A500F78EE0 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = EC8078981377F5A500F78EE0 /* LICENSE */; };
+		EC9449DA1377F01100E0CC84 /* IllegalArgumentAspect.m in Sources */ = {isa = PBXBuildFile; fileRef = EC9449D31377F01100E0CC84 /* IllegalArgumentAspect.m */; };
+		EC9449DB1377F01100E0CC84 /* IllegalArgumentClass.m in Sources */ = {isa = PBXBuildFile; fileRef = EC9449D51377F01100E0CC84 /* IllegalArgumentClass.m */; };
+		EC9449DC1377F01100E0CC84 /* SimpleSampleClass.m in Sources */ = {isa = PBXBuildFile; fileRef = EC9449D71377F01100E0CC84 /* SimpleSampleClass.m */; };
+		EC9449DD1377F01100E0CC84 /* TimeSampleClass.m in Sources */ = {isa = PBXBuildFile; fileRef = EC9449D91377F01100E0CC84 /* TimeSampleClass.m */; };
+		ECAED6DD1377F454003BF705 /* libMGAOP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ECAED6DC1377F454003BF705 /* libMGAOP.a */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EC3EA2B713770C16009ABDF7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EC3EA2B013770C16009ABDF7 /* MGAOP.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = ECB4F09C1376F76C007D6618;
+			remoteInfo = MGAOP;
+		};
+		EC3EA2B913770C25009ABDF7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EC3EA2B013770C16009ABDF7 /* MGAOP.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = ECB4F09B1376F76C007D6618;
+			remoteInfo = MGAOP;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		EC3EA27D137708AD009ABDF7 /* DemoAspects.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoAspects.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC3EA281137708AD009ABDF7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		EC3EA283137708AD009ABDF7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EC3EA285137708AD009ABDF7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		EC3EA289137708AD009ABDF7 /* DemoAspects-Info.plist */ = {isa = PBXFileReference; path = "DemoAspects-Info.plist"; sourceTree = "<group>"; };
+		EC3EA289137708AD009ABDF7 /* DemoAspects-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DemoAspects-Info.plist"; sourceTree = "<group>"; };
 		EC3EA28B137708AD009ABDF7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		EC3EA28D137708AD009ABDF7 /* DemoAspects-Prefix.pch */ = {isa = PBXFileReference; path = "DemoAspects-Prefix.pch"; sourceTree = "<group>"; };
+		EC3EA28D137708AD009ABDF7 /* DemoAspects-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DemoAspects-Prefix.pch"; sourceTree = "<group>"; };
 		EC3EA28E137708AD009ABDF7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		EC3EA290137708AD009ABDF7 /* DemoAspectsAppDelegate.h */ = {isa = PBXFileReference; path = DemoAspectsAppDelegate.h; sourceTree = "<group>"; };
+		EC3EA290137708AD009ABDF7 /* DemoAspectsAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoAspectsAppDelegate.h; sourceTree = "<group>"; };
 		EC3EA291137708AD009ABDF7 /* DemoAspectsAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoAspectsAppDelegate.m; sourceTree = "<group>"; };
-		EC3EA294137708AD009ABDF7 /* DemoAspectsAppDelegate_iPhone.h */ = {isa = PBXFileReference; name = DemoAspectsAppDelegate_iPhone.h; path = iPhone/DemoAspectsAppDelegate_iPhone.h; sourceTree = "<group>"; };
+		EC3EA294137708AD009ABDF7 /* DemoAspectsAppDelegate_iPhone.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DemoAspectsAppDelegate_iPhone.h; path = iPhone/DemoAspectsAppDelegate_iPhone.h; sourceTree = "<group>"; };
 		EC3EA295137708AD009ABDF7 /* DemoAspectsAppDelegate_iPhone.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = DemoAspectsAppDelegate_iPhone.m; path = iPhone/DemoAspectsAppDelegate_iPhone.m; sourceTree = "<group>"; };
 		EC3EA298137708AD009ABDF7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = iPhone/en.lproj/MainWindow_iPhone.xib; sourceTree = "<group>"; };
-		EC3EA29B137708AD009ABDF7 /* DemoAspectsAppDelegate_iPad.h */ = {isa = PBXFileReference; name = DemoAspectsAppDelegate_iPad.h; path = iPad/DemoAspectsAppDelegate_iPad.h; sourceTree = "<group>"; };
+		EC3EA29B137708AD009ABDF7 /* DemoAspectsAppDelegate_iPad.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DemoAspectsAppDelegate_iPad.h; path = iPad/DemoAspectsAppDelegate_iPad.h; sourceTree = "<group>"; };
 		EC3EA29C137708AD009ABDF7 /* DemoAspectsAppDelegate_iPad.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = DemoAspectsAppDelegate_iPad.m; path = iPad/DemoAspectsAppDelegate_iPad.m; sourceTree = "<group>"; };
 		EC3EA29F137708AD009ABDF7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = iPad/en.lproj/MainWindow_iPad.xib; sourceTree = "<group>"; };
+		EC3EA2B013770C16009ABDF7 /* MGAOP.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MGAOP.xcodeproj; path = ../MGAOP.xcodeproj; sourceTree = "<group>"; };
+		EC8078981377F5A500F78EE0 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = ../../LICENSE; sourceTree = "<group>"; };
+		EC9449D21377F01100E0CC84 /* IllegalArgumentAspect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IllegalArgumentAspect.h; sourceTree = "<group>"; };
+		EC9449D31377F01100E0CC84 /* IllegalArgumentAspect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IllegalArgumentAspect.m; sourceTree = "<group>"; };
+		EC9449D41377F01100E0CC84 /* IllegalArgumentClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IllegalArgumentClass.h; sourceTree = "<group>"; };
+		EC9449D51377F01100E0CC84 /* IllegalArgumentClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IllegalArgumentClass.m; sourceTree = "<group>"; };
+		EC9449D61377F01100E0CC84 /* SimpleSampleClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleSampleClass.h; sourceTree = "<group>"; };
+		EC9449D71377F01100E0CC84 /* SimpleSampleClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleSampleClass.m; sourceTree = "<group>"; };
+		EC9449D81377F01100E0CC84 /* TimeSampleClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeSampleClass.h; sourceTree = "<group>"; };
+		EC9449D91377F01100E0CC84 /* TimeSampleClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeSampleClass.m; sourceTree = "<group>"; };
+		ECAED6DC1377F454003BF705 /* libMGAOP.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMGAOP.a; path = ../lib/libMGAOP.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECAED6DD1377F454003BF705 /* libMGAOP.a in Frameworks */,
 				EC3EA282137708AD009ABDF7 /* UIKit.framework in Frameworks */,
 				EC3EA284137708AD009ABDF7 /* Foundation.framework in Frameworks */,
 				EC3EA286137708AD009ABDF7 /* CoreGraphics.framework in Frameworks */,
@@ -72,6 +107,8 @@
 		EC3EA280137708AD009ABDF7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EC3EA2B013770C16009ABDF7 /* MGAOP.xcodeproj */,
+				ECAED6DC1377F454003BF705 /* libMGAOP.a */,
 				EC3EA281137708AD009ABDF7 /* UIKit.framework */,
 				EC3EA283137708AD009ABDF7 /* Foundation.framework */,
 				EC3EA285137708AD009ABDF7 /* CoreGraphics.framework */,
@@ -82,11 +119,10 @@
 		EC3EA287137708AD009ABDF7 /* DemoAspects */ = {
 			isa = PBXGroup;
 			children = (
-				EC3EA290137708AD009ABDF7 /* DemoAspectsAppDelegate.h */,
-				EC3EA291137708AD009ABDF7 /* DemoAspectsAppDelegate.m */,
-				EC3EA293137708AD009ABDF7 /* iPhone */,
-				EC3EA29A137708AD009ABDF7 /* iPad */,
+				EC9449D01377F01100E0CC84 /* Demo Files */,
+				EC3EA2AE137708D4009ABDF7 /* Skeleton Files */,
 				EC3EA288137708AD009ABDF7 /* Supporting Files */,
+				EC8078981377F5A500F78EE0 /* LICENSE */,
 			);
 			path = DemoAspects;
 			sourceTree = "<group>";
@@ -122,6 +158,48 @@
 			name = iPad;
 			sourceTree = "<group>";
 		};
+		EC3EA2AE137708D4009ABDF7 /* Skeleton Files */ = {
+			isa = PBXGroup;
+			children = (
+				EC3EA290137708AD009ABDF7 /* DemoAspectsAppDelegate.h */,
+				EC3EA291137708AD009ABDF7 /* DemoAspectsAppDelegate.m */,
+				EC3EA293137708AD009ABDF7 /* iPhone */,
+				EC3EA29A137708AD009ABDF7 /* iPad */,
+			);
+			name = "Skeleton Files";
+			sourceTree = "<group>";
+		};
+		EC3EA2B113770C16009ABDF7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EC3EA2B813770C16009ABDF7 /* libMGAOP.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EC9449D01377F01100E0CC84 /* Demo Files */ = {
+			isa = PBXGroup;
+			children = (
+				EC9449D11377F01100E0CC84 /* Custom Aspects */,
+				EC9449D41377F01100E0CC84 /* IllegalArgumentClass.h */,
+				EC9449D51377F01100E0CC84 /* IllegalArgumentClass.m */,
+				EC9449D61377F01100E0CC84 /* SimpleSampleClass.h */,
+				EC9449D71377F01100E0CC84 /* SimpleSampleClass.m */,
+				EC9449D81377F01100E0CC84 /* TimeSampleClass.h */,
+				EC9449D91377F01100E0CC84 /* TimeSampleClass.m */,
+			);
+			path = "Demo Files";
+			sourceTree = "<group>";
+		};
+		EC9449D11377F01100E0CC84 /* Custom Aspects */ = {
+			isa = PBXGroup;
+			children = (
+				EC9449D21377F01100E0CC84 /* IllegalArgumentAspect.h */,
+				EC9449D31377F01100E0CC84 /* IllegalArgumentAspect.m */,
+			);
+			path = "Custom Aspects";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -136,6 +214,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				EC3EA2BA13770C25009ABDF7 /* PBXTargetDependency */,
 			);
 			name = DemoAspects;
 			productName = DemoAspects;
@@ -160,12 +239,28 @@
 			mainGroup = EC3EA272137708AD009ABDF7;
 			productRefGroup = EC3EA27E137708AD009ABDF7 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = EC3EA2B113770C16009ABDF7 /* Products */;
+					ProjectRef = EC3EA2B013770C16009ABDF7 /* MGAOP.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				EC3EA27C137708AD009ABDF7 /* DemoAspects */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		EC3EA2B813770C16009ABDF7 /* libMGAOP.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libMGAOP.a;
+			remoteRef = EC3EA2B713770C16009ABDF7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		EC3EA27B137708AD009ABDF7 /* Resources */ = {
@@ -175,6 +270,7 @@
 				EC3EA28C137708AD009ABDF7 /* InfoPlist.strings in Resources */,
 				EC3EA299137708AD009ABDF7 /* MainWindow_iPhone.xib in Resources */,
 				EC3EA2A0137708AD009ABDF7 /* MainWindow_iPad.xib in Resources */,
+				EC8078991377F5A500F78EE0 /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,10 +285,22 @@
 				EC3EA292137708AD009ABDF7 /* DemoAspectsAppDelegate.m in Sources */,
 				EC3EA296137708AD009ABDF7 /* DemoAspectsAppDelegate_iPhone.m in Sources */,
 				EC3EA29D137708AD009ABDF7 /* DemoAspectsAppDelegate_iPad.m in Sources */,
+				EC9449DA1377F01100E0CC84 /* IllegalArgumentAspect.m in Sources */,
+				EC9449DB1377F01100E0CC84 /* IllegalArgumentClass.m in Sources */,
+				EC9449DC1377F01100E0CC84 /* SimpleSampleClass.m in Sources */,
+				EC9449DD1377F01100E0CC84 /* TimeSampleClass.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EC3EA2BA13770C25009ABDF7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MGAOP;
+			targetProxy = EC3EA2B913770C25009ABDF7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		EC3EA28A137708AD009ABDF7 /* InfoPlist.strings */ = {
@@ -259,12 +367,23 @@
 		EC3EA2A4137708AD009ABDF7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DemoAspects/DemoAspects-Prefix.pch";
+				HEADER_SEARCH_PATHS = "../MGAOP/**";
 				INFOPLIST_FILE = "DemoAspects/DemoAspects-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/../lib\"",
+				);
+				OTHER_LDFLAGS = (
+					"-licucore",
+					"-all_load",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -273,11 +392,22 @@
 		EC3EA2A5137708AD009ABDF7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DemoAspects/DemoAspects-Prefix.pch";
+				HEADER_SEARCH_PATHS = "../MGAOP/**";
 				INFOPLIST_FILE = "DemoAspects/DemoAspects-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/../lib\"",
+				);
+				OTHER_LDFLAGS = (
+					"-licucore",
+					"-all_load",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
@@ -303,6 +433,7 @@
 				EC3EA2A5137708AD009ABDF7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

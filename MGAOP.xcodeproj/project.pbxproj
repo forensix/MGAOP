@@ -7,13 +7,81 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC2CDA41137710960075C213 /* MGAOP.h in Headers */ = {isa = PBXBuildFile; fileRef = EC2CDA40137710960075C213 /* MGAOP.h */; };
 		ECB4F0A01376F76C007D6618 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECB4F09F1376F76C007D6618 /* Foundation.framework */; };
+		ECB4F0CF13770100007D6618 /* AOPAdvice.h in Headers */ = {isa = PBXBuildFile; fileRef = ECB4F0AC13770100007D6618 /* AOPAdvice.h */; };
+		ECB4F0D013770100007D6618 /* AOPAdvice.m in Sources */ = {isa = PBXBuildFile; fileRef = ECB4F0AD13770100007D6618 /* AOPAdvice.m */; };
+		ECB4F0D113770100007D6618 /* AOPAdviceDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = ECB4F0AE13770100007D6618 /* AOPAdviceDelegate.h */; };
+		ECB4F0D213770100007D6618 /* AOPAspect.h in Headers */ = {isa = PBXBuildFile; fileRef = ECB4F0AF13770100007D6618 /* AOPAspect.h */; };
+		ECB4F0D313770100007D6618 /* AOPAspect.m in Sources */ = {isa = PBXBuildFile; fileRef = ECB4F0B013770100007D6618 /* AOPAspect.m */; };
+		ECB4F0D413770100007D6618 /* AOPClass.h in Headers */ = {isa = PBXBuildFile; fileRef = ECB4F0B113770100007D6618 /* AOPClass.h */; };
+		ECB4F0D513770100007D6618 /* AOPClass.m in Sources */ = {isa = PBXBuildFile; fileRef = ECB4F0B213770100007D6618 /* AOPClass.m */; };
+		ECB4F0D613770100007D6618 /* AOPInterceptor.h in Headers */ = {isa = PBXBuildFile; fileRef = ECB4F0B313770100007D6618 /* AOPInterceptor.h */; };
+		ECB4F0D713770100007D6618 /* AOPInterceptor.m in Sources */ = {isa = PBXBuildFile; fileRef = ECB4F0B413770100007D6618 /* AOPInterceptor.m */; };
+		ECB4F0D813770100007D6618 /* AOPJoinpoint.h in Headers */ = {isa = PBXBuildFile; fileRef = ECB4F0B513770100007D6618 /* AOPJoinpoint.h */; };
+		ECB4F0D913770100007D6618 /* AOPJoinpoint.m in Sources */ = {isa = PBXBuildFile; fileRef = ECB4F0B613770100007D6618 /* AOPJoinpoint.m */; };
+		ECB4F0DA13770100007D6618 /* AOPPointcut+Joinpoints.h in Headers */ = {isa = PBXBuildFile; fileRef = ECB4F0B713770100007D6618 /* AOPPointcut+Joinpoints.h */; };
+		ECB4F0DB13770100007D6618 /* AOPPointcut+Joinpoints.m in Sources */ = {isa = PBXBuildFile; fileRef = ECB4F0B813770100007D6618 /* AOPPointcut+Joinpoints.m */; };
+		ECB4F0DC13770100007D6618 /* AOPPointcut.h in Headers */ = {isa = PBXBuildFile; fileRef = ECB4F0B913770100007D6618 /* AOPPointcut.h */; };
+		ECB4F0DD13770100007D6618 /* AOPPointcut.m in Sources */ = {isa = PBXBuildFile; fileRef = ECB4F0BA13770100007D6618 /* AOPPointcut.m */; };
+		ECB4F0DE13770100007D6618 /* AOPRuntime.h in Headers */ = {isa = PBXBuildFile; fileRef = ECB4F0BB13770100007D6618 /* AOPRuntime.h */; };
+		ECB4F0DF13770100007D6618 /* AOPRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = ECB4F0BC13770100007D6618 /* AOPRuntime.m */; };
+		ECB4F0E013770100007D6618 /* AOPLoggingAspect.h in Headers */ = {isa = PBXBuildFile; fileRef = ECB4F0BE13770100007D6618 /* AOPLoggingAspect.h */; };
+		ECB4F0E113770100007D6618 /* AOPLoggingAspect.m in Sources */ = {isa = PBXBuildFile; fileRef = ECB4F0BF13770100007D6618 /* AOPLoggingAspect.m */; };
+		ECB4F0E213770100007D6618 /* AOPTimeProfilingAspect.h in Headers */ = {isa = PBXBuildFile; fileRef = ECB4F0C013770100007D6618 /* AOPTimeProfilingAspect.h */; };
+		ECB4F0E313770100007D6618 /* AOPTimeProfilingAspect.m in Sources */ = {isa = PBXBuildFile; fileRef = ECB4F0C113770100007D6618 /* AOPTimeProfilingAspect.m */; };
+		ECB4F0E413770100007D6618 /* AOPAspectCreator.h in Headers */ = {isa = PBXBuildFile; fileRef = ECB4F0C313770100007D6618 /* AOPAspectCreator.h */; };
+		ECB4F0E513770100007D6618 /* AOPAspectCreator.m in Sources */ = {isa = PBXBuildFile; fileRef = ECB4F0C413770100007D6618 /* AOPAspectCreator.m */; };
+		ECB4F0E613770100007D6618 /* AOPAdvicePrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = ECB4F0C613770100007D6618 /* AOPAdvicePrivate.h */; };
+		ECB4F0E713770100007D6618 /* AOPInterceptorPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = ECB4F0C713770100007D6618 /* AOPInterceptorPrivate.h */; };
+		ECB4F0E813770100007D6618 /* AOPPointcutPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = ECB4F0C813770100007D6618 /* AOPPointcutPrivate.h */; };
+		ECB4F0E913770100007D6618 /* AOPRuntimePrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = ECB4F0C913770100007D6618 /* AOPRuntimePrivate.h */; };
+		ECB4F0EA13770100007D6618 /* AOPShared.h in Headers */ = {isa = PBXBuildFile; fileRef = ECB4F0CB13770100007D6618 /* AOPShared.h */; };
+		ECB4F0EB13770100007D6618 /* AOPNilValue.h in Headers */ = {isa = PBXBuildFile; fileRef = ECB4F0CD13770100007D6618 /* AOPNilValue.h */; };
+		ECB4F0EC13770100007D6618 /* AOPNilValue.m in Sources */ = {isa = PBXBuildFile; fileRef = ECB4F0CE13770100007D6618 /* AOPNilValue.m */; };
+		ECB4F0F213770149007D6618 /* RegexKitLite.h in Headers */ = {isa = PBXBuildFile; fileRef = ECB4F0F013770149007D6618 /* RegexKitLite.h */; };
+		ECB4F0F313770149007D6618 /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = ECB4F0F113770149007D6618 /* RegexKitLite.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EC2CDA40137710960075C213 /* MGAOP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGAOP.h; sourceTree = "<group>"; };
 		ECB4F09C1376F76C007D6618 /* libMGAOP.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMGAOP.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECB4F09F1376F76C007D6618 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		ECB4F0A31376F76C007D6618 /* MGAOP-Prefix.pch */ = {isa = PBXFileReference; path = "MGAOP-Prefix.pch"; sourceTree = "<group>"; };
+		ECB4F0A31376F76C007D6618 /* MGAOP-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MGAOP-Prefix.pch"; sourceTree = "<group>"; };
+		ECB4F0AC13770100007D6618 /* AOPAdvice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOPAdvice.h; sourceTree = "<group>"; };
+		ECB4F0AD13770100007D6618 /* AOPAdvice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOPAdvice.m; sourceTree = "<group>"; };
+		ECB4F0AE13770100007D6618 /* AOPAdviceDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOPAdviceDelegate.h; sourceTree = "<group>"; };
+		ECB4F0AF13770100007D6618 /* AOPAspect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOPAspect.h; sourceTree = "<group>"; };
+		ECB4F0B013770100007D6618 /* AOPAspect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOPAspect.m; sourceTree = "<group>"; };
+		ECB4F0B113770100007D6618 /* AOPClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOPClass.h; sourceTree = "<group>"; };
+		ECB4F0B213770100007D6618 /* AOPClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOPClass.m; sourceTree = "<group>"; };
+		ECB4F0B313770100007D6618 /* AOPInterceptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOPInterceptor.h; sourceTree = "<group>"; };
+		ECB4F0B413770100007D6618 /* AOPInterceptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOPInterceptor.m; sourceTree = "<group>"; };
+		ECB4F0B513770100007D6618 /* AOPJoinpoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOPJoinpoint.h; sourceTree = "<group>"; };
+		ECB4F0B613770100007D6618 /* AOPJoinpoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOPJoinpoint.m; sourceTree = "<group>"; };
+		ECB4F0B713770100007D6618 /* AOPPointcut+Joinpoints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AOPPointcut+Joinpoints.h"; sourceTree = "<group>"; };
+		ECB4F0B813770100007D6618 /* AOPPointcut+Joinpoints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AOPPointcut+Joinpoints.m"; sourceTree = "<group>"; };
+		ECB4F0B913770100007D6618 /* AOPPointcut.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOPPointcut.h; sourceTree = "<group>"; };
+		ECB4F0BA13770100007D6618 /* AOPPointcut.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOPPointcut.m; sourceTree = "<group>"; };
+		ECB4F0BB13770100007D6618 /* AOPRuntime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOPRuntime.h; sourceTree = "<group>"; };
+		ECB4F0BC13770100007D6618 /* AOPRuntime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOPRuntime.m; sourceTree = "<group>"; };
+		ECB4F0BE13770100007D6618 /* AOPLoggingAspect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOPLoggingAspect.h; sourceTree = "<group>"; };
+		ECB4F0BF13770100007D6618 /* AOPLoggingAspect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOPLoggingAspect.m; sourceTree = "<group>"; };
+		ECB4F0C013770100007D6618 /* AOPTimeProfilingAspect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOPTimeProfilingAspect.h; sourceTree = "<group>"; };
+		ECB4F0C113770100007D6618 /* AOPTimeProfilingAspect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOPTimeProfilingAspect.m; sourceTree = "<group>"; };
+		ECB4F0C313770100007D6618 /* AOPAspectCreator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOPAspectCreator.h; sourceTree = "<group>"; };
+		ECB4F0C413770100007D6618 /* AOPAspectCreator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOPAspectCreator.m; sourceTree = "<group>"; };
+		ECB4F0C613770100007D6618 /* AOPAdvicePrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOPAdvicePrivate.h; sourceTree = "<group>"; };
+		ECB4F0C713770100007D6618 /* AOPInterceptorPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOPInterceptorPrivate.h; sourceTree = "<group>"; };
+		ECB4F0C813770100007D6618 /* AOPPointcutPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOPPointcutPrivate.h; sourceTree = "<group>"; };
+		ECB4F0C913770100007D6618 /* AOPRuntimePrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOPRuntimePrivate.h; sourceTree = "<group>"; };
+		ECB4F0CB13770100007D6618 /* AOPShared.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOPShared.h; sourceTree = "<group>"; };
+		ECB4F0CD13770100007D6618 /* AOPNilValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOPNilValue.h; sourceTree = "<group>"; };
+		ECB4F0CE13770100007D6618 /* AOPNilValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOPNilValue.m; sourceTree = "<group>"; };
+		ECB4F0EF13770149007D6618 /* LINKER */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LINKER; sourceTree = "<group>"; };
+		ECB4F0F013770149007D6618 /* RegexKitLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegexKitLite.h; sourceTree = "<group>"; };
+		ECB4F0F113770149007D6618 /* RegexKitLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegexKitLite.m; sourceTree = "<group>"; };
+		ECC256FB13770DCF0044E227 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,6 +96,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EC2CDA3F137710960075C213 /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				EC2CDA40137710960075C213 /* MGAOP.h */,
+			);
+			path = Public;
+			sourceTree = "<group>";
+		};
 		ECB4F0911376F76C007D6618 = {
 			isa = PBXGroup;
 			children = (
@@ -56,7 +132,10 @@
 		ECB4F0A11376F76C007D6618 /* MGAOP */ = {
 			isa = PBXGroup;
 			children = (
+				ECB4F0AB13770100007D6618 /* Core Files */,
 				ECB4F0A21376F76C007D6618 /* Supporting Files */,
+				ECB4F0ED13770148007D6618 /* External Files */,
+				ECC256FB13770DCF0044E227 /* LICENSE */,
 			);
 			path = MGAOP;
 			sourceTree = "<group>";
@@ -69,6 +148,102 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		ECB4F0AB13770100007D6618 /* Core Files */ = {
+			isa = PBXGroup;
+			children = (
+				ECB4F0AC13770100007D6618 /* AOPAdvice.h */,
+				ECB4F0AD13770100007D6618 /* AOPAdvice.m */,
+				ECB4F0AE13770100007D6618 /* AOPAdviceDelegate.h */,
+				ECB4F0AF13770100007D6618 /* AOPAspect.h */,
+				ECB4F0B013770100007D6618 /* AOPAspect.m */,
+				ECB4F0B113770100007D6618 /* AOPClass.h */,
+				ECB4F0B213770100007D6618 /* AOPClass.m */,
+				ECB4F0B313770100007D6618 /* AOPInterceptor.h */,
+				ECB4F0B413770100007D6618 /* AOPInterceptor.m */,
+				ECB4F0B513770100007D6618 /* AOPJoinpoint.h */,
+				ECB4F0B613770100007D6618 /* AOPJoinpoint.m */,
+				ECB4F0B713770100007D6618 /* AOPPointcut+Joinpoints.h */,
+				ECB4F0B813770100007D6618 /* AOPPointcut+Joinpoints.m */,
+				ECB4F0B913770100007D6618 /* AOPPointcut.h */,
+				ECB4F0BA13770100007D6618 /* AOPPointcut.m */,
+				ECB4F0BB13770100007D6618 /* AOPRuntime.h */,
+				ECB4F0BC13770100007D6618 /* AOPRuntime.m */,
+				EC2CDA3F137710960075C213 /* Public */,
+				ECB4F0BD13770100007D6618 /* Custom Aspects */,
+				ECB4F0C513770100007D6618 /* Private */,
+				ECB4F0CA13770100007D6618 /* Shared */,
+				ECB4F0CC13770100007D6618 /* Types */,
+			);
+			path = "Core Files";
+			sourceTree = "<group>";
+		};
+		ECB4F0BD13770100007D6618 /* Custom Aspects */ = {
+			isa = PBXGroup;
+			children = (
+				ECB4F0BE13770100007D6618 /* AOPLoggingAspect.h */,
+				ECB4F0BF13770100007D6618 /* AOPLoggingAspect.m */,
+				ECB4F0C013770100007D6618 /* AOPTimeProfilingAspect.h */,
+				ECB4F0C113770100007D6618 /* AOPTimeProfilingAspect.m */,
+				ECB4F0C213770100007D6618 /* Creator */,
+			);
+			path = "Custom Aspects";
+			sourceTree = "<group>";
+		};
+		ECB4F0C213770100007D6618 /* Creator */ = {
+			isa = PBXGroup;
+			children = (
+				ECB4F0C313770100007D6618 /* AOPAspectCreator.h */,
+				ECB4F0C413770100007D6618 /* AOPAspectCreator.m */,
+			);
+			path = Creator;
+			sourceTree = "<group>";
+		};
+		ECB4F0C513770100007D6618 /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				ECB4F0C613770100007D6618 /* AOPAdvicePrivate.h */,
+				ECB4F0C713770100007D6618 /* AOPInterceptorPrivate.h */,
+				ECB4F0C813770100007D6618 /* AOPPointcutPrivate.h */,
+				ECB4F0C913770100007D6618 /* AOPRuntimePrivate.h */,
+			);
+			path = Private;
+			sourceTree = "<group>";
+		};
+		ECB4F0CA13770100007D6618 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				ECB4F0CB13770100007D6618 /* AOPShared.h */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		ECB4F0CC13770100007D6618 /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				ECB4F0CD13770100007D6618 /* AOPNilValue.h */,
+				ECB4F0CE13770100007D6618 /* AOPNilValue.m */,
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
+		ECB4F0ED13770148007D6618 /* External Files */ = {
+			isa = PBXGroup;
+			children = (
+				ECB4F0EE13770148007D6618 /* Regex */,
+			);
+			path = "External Files";
+			sourceTree = SOURCE_ROOT;
+		};
+		ECB4F0EE13770148007D6618 /* Regex */ = {
+			isa = PBXGroup;
+			children = (
+				ECB4F0EF13770149007D6618 /* LINKER */,
+				ECB4F0F013770149007D6618 /* RegexKitLite.h */,
+				ECB4F0F113770149007D6618 /* RegexKitLite.m */,
+			);
+			path = Regex;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -76,6 +251,26 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECB4F0CF13770100007D6618 /* AOPAdvice.h in Headers */,
+				ECB4F0D113770100007D6618 /* AOPAdviceDelegate.h in Headers */,
+				ECB4F0D213770100007D6618 /* AOPAspect.h in Headers */,
+				ECB4F0D413770100007D6618 /* AOPClass.h in Headers */,
+				ECB4F0D613770100007D6618 /* AOPInterceptor.h in Headers */,
+				ECB4F0D813770100007D6618 /* AOPJoinpoint.h in Headers */,
+				ECB4F0DA13770100007D6618 /* AOPPointcut+Joinpoints.h in Headers */,
+				ECB4F0DC13770100007D6618 /* AOPPointcut.h in Headers */,
+				ECB4F0DE13770100007D6618 /* AOPRuntime.h in Headers */,
+				ECB4F0E013770100007D6618 /* AOPLoggingAspect.h in Headers */,
+				ECB4F0E213770100007D6618 /* AOPTimeProfilingAspect.h in Headers */,
+				ECB4F0E413770100007D6618 /* AOPAspectCreator.h in Headers */,
+				ECB4F0E613770100007D6618 /* AOPAdvicePrivate.h in Headers */,
+				ECB4F0E713770100007D6618 /* AOPInterceptorPrivate.h in Headers */,
+				ECB4F0E813770100007D6618 /* AOPPointcutPrivate.h in Headers */,
+				ECB4F0E913770100007D6618 /* AOPRuntimePrivate.h in Headers */,
+				ECB4F0EA13770100007D6618 /* AOPShared.h in Headers */,
+				ECB4F0EB13770100007D6618 /* AOPNilValue.h in Headers */,
+				ECB4F0F213770149007D6618 /* RegexKitLite.h in Headers */,
+				EC2CDA41137710960075C213 /* MGAOP.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,6 +324,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECB4F0D013770100007D6618 /* AOPAdvice.m in Sources */,
+				ECB4F0D313770100007D6618 /* AOPAspect.m in Sources */,
+				ECB4F0D513770100007D6618 /* AOPClass.m in Sources */,
+				ECB4F0D713770100007D6618 /* AOPInterceptor.m in Sources */,
+				ECB4F0D913770100007D6618 /* AOPJoinpoint.m in Sources */,
+				ECB4F0DB13770100007D6618 /* AOPPointcut+Joinpoints.m in Sources */,
+				ECB4F0DD13770100007D6618 /* AOPPointcut.m in Sources */,
+				ECB4F0DF13770100007D6618 /* AOPRuntime.m in Sources */,
+				ECB4F0E113770100007D6618 /* AOPLoggingAspect.m in Sources */,
+				ECB4F0E313770100007D6618 /* AOPTimeProfilingAspect.m in Sources */,
+				ECB4F0E513770100007D6618 /* AOPAspectCreator.m in Sources */,
+				ECB4F0EC13770100007D6618 /* AOPNilValue.m in Sources */,
+				ECB4F0F313770149007D6618 /* RegexKitLite.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,6 +379,10 @@
 				DSTROOT = /tmp/MGAOP.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MGAOP/MGAOP-Prefix.pch";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/lib\"",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -183,6 +395,10 @@
 				DSTROOT = /tmp/MGAOP.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MGAOP/MGAOP-Prefix.pch";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/lib\"",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -207,6 +423,7 @@
 				ECB4F0A81376F76C007D6618 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

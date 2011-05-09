@@ -1,5 +1,5 @@
 // -----------------------------------------------------------------------------
-//  DemoAspectsAppDelegate_iPhone.h
+//  AOPLoggingAspect.h
 //  MGAOP
 //
 //  MGAOP is available under *either* the terms of the modified BSD license
@@ -9,11 +9,18 @@
 //  Copyright (c) 2011, Manuel Gebele.
 // -----------------------------------------------------------------------------
 
-#import <UIKit/UIKit.h>
-#import "DemoAspectsAppDelegate.h"
+#import <Foundation/Foundation.h>
 
-@interface DemoAspectsAppDelegate_iPhone : DemoAspectsAppDelegate {
-    
+#import "AOPAspect.h"
+#import "AOPAdviceDelegate.h"
+
+@interface AOPLoggingAspect : AOPAspect <AOPAdviceDelegate>
+{
+
 }
+
++ (AOPLoggingAspect *)loggingAspectForClassPattern:(NSString *)classPattern
+                                     methodPattern:(NSString *)methodPattern;
+
 
 @end

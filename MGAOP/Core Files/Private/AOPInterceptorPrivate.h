@@ -1,5 +1,5 @@
 // -----------------------------------------------------------------------------
-//  DemoAspectsAppDelegate_iPhone.h
+//  AOPInterceptorPrivate.h
 //  MGAOP
 //
 //  MGAOP is available under *either* the terms of the modified BSD license
@@ -9,11 +9,14 @@
 //  Copyright (c) 2011, Manuel Gebele.
 // -----------------------------------------------------------------------------
 
-#import <UIKit/UIKit.h>
-#import "DemoAspectsAppDelegate.h"
+#import <Foundation/Foundation.h>
 
-@interface DemoAspectsAppDelegate_iPhone : DemoAspectsAppDelegate {
-    
-}
+@protocol AOPInterceptorPrivate
+
+- (void)setupInitialValues;
+
+- (void)printWarningThatImplementationWasAlreadyStoredForIdentifier:(NSString *)identifier;
+- (void)printErrorThatIllegalFrameLengthWasFoundForIdentifier:(NSString *)identifier;
+- (void)printErrorThatIllegalReturnValueSizeWasFoundForIdentifier:(NSString *)identifier;
 
 @end

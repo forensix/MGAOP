@@ -1,5 +1,5 @@
 // -----------------------------------------------------------------------------
-//  DemoAspectsAppDelegate_iPad.m
+//  AOPAspectCreator.h
 //  MGAOP
 //
 //  MGAOP is available under *either* the terms of the modified BSD license
@@ -9,14 +9,23 @@
 //  Copyright (c) 2011, Manuel Gebele.
 // -----------------------------------------------------------------------------
 
+#import <Foundation/Foundation.h>
 
-#import "DemoAspectsAppDelegate_iPad.h"
+@class AOPAspect;
 
-@implementation DemoAspectsAppDelegate_iPad
+typedef enum {
+    kAOPAspectTypeLogging,
+    kAOPAspectTypeTimeProfiling,
+    kAOPAspectTypePrivateApiCall
+} AOPAspectType;
 
-- (void)dealloc
+@interface AOPAspectCreator : NSObject
 {
-	[super dealloc];
+
 }
+
++ (AOPAspect *)aspectOfType:(AOPAspectType)aspectType
+               classPattern:(NSString *)classPattern
+              methodPattern:(NSString *)methodPattern;
 
 @end

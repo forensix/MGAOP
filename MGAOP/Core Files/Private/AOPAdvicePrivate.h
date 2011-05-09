@@ -1,5 +1,5 @@
 // -----------------------------------------------------------------------------
-//  DemoAspectsAppDelegate_iPhone.h
+//  AOPAdvicePrivate.h
 //  MGAOP
 //
 //  MGAOP is available under *either* the terms of the modified BSD license
@@ -9,11 +9,15 @@
 //  Copyright (c) 2011, Manuel Gebele.
 // -----------------------------------------------------------------------------
 
-#import <UIKit/UIKit.h>
-#import "DemoAspectsAppDelegate.h"
+#import <Foundation/Foundation.h>
 
-@interface DemoAspectsAppDelegate_iPhone : DemoAspectsAppDelegate {
-    
-}
+@protocol AOPAdvicePrivate
+
+- (void)setupInitialValues:(NSArray *)values;
+
+- (void)informDelegateBeforeExecution;
+- (void)informDelegateInsteadExecution;
+- (void)informDelegateAfterExecution;
+- (BOOL)askDelegateAboutInsteadExecution;
 
 @end

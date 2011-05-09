@@ -1,5 +1,5 @@
 // -----------------------------------------------------------------------------
-//  DemoAspectsAppDelegate_iPhone.h
+//  MGAOP.h
 //  MGAOP
 //
 //  MGAOP is available under *either* the terms of the modified BSD license
@@ -9,11 +9,11 @@
 //  Copyright (c) 2011, Manuel Gebele.
 // -----------------------------------------------------------------------------
 
-#import <UIKit/UIKit.h>
-#import "DemoAspectsAppDelegate.h"
+#import "AOPRuntime.h"
+#import "AOPAspect.h"
+#import "AOPPointcut.h"
+#import "AOPAdvice.h"
+#import "AOPAdviceDelegate.h"
+#import "AOPAspectCreator.h"
+#import "AOPNilValue.h"
 
-@interface DemoAspectsAppDelegate_iPhone : DemoAspectsAppDelegate {
-    
-}
-
-@end

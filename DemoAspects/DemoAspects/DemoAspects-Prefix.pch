@@ -1,6 +1,12 @@
+// -----------------------------------------------------------------------------
+//  MGAOP
 //
-// Prefix header for all source files of the 'DemoAspects' target in the 'DemoAspects' project
-//
+//  MGAOP is available under *either* the terms of the modified BSD license
+//  *or* the MIT License (2008). See http://opensource.org/licenses/alphabetical
+//  for full text.
+// 
+//  Copyright (c) 2011, Manuel Gebele.
+// -----------------------------------------------------------------------------
 
 #import <Availability.h>
 
@@ -11,4 +17,10 @@
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
+    #import "MGAOP.h"
 #endif
+
+#define CLASS NSStringFromClass([self class])
+#define SELECT(sel) (NSStringFromSelector(sel))
+#define RELEASE_SAFELY(__POINTER) { [__POINTER release]; __POINTER = nil; }
+

@@ -1,5 +1,5 @@
 // -----------------------------------------------------------------------------
-//  DemoAspectsAppDelegate_iPhone.h
+//  AOPPointcut+Joinpoints.h
 //  MGAOP
 //
 //  MGAOP is available under *either* the terms of the modified BSD license
@@ -9,11 +9,14 @@
 //  Copyright (c) 2011, Manuel Gebele.
 // -----------------------------------------------------------------------------
 
-#import <UIKit/UIKit.h>
-#import "DemoAspectsAppDelegate.h"
+#import <Foundation/Foundation.h>
 
-@interface DemoAspectsAppDelegate_iPhone : DemoAspectsAppDelegate {
-    
-}
+#import "AOPPointcut.h"
+#import "AOPPointcutPrivate.h"
+
+@interface AOPPointcut (Joinpoints) <AOPPointcutPrivate>
+
+// -all_load
++ (NSArray *)joinpointsForPointcut:(AOPPointcut *)pointcut;
 
 @end
