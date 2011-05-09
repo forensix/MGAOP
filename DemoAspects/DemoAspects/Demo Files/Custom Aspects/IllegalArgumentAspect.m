@@ -1,9 +1,12 @@
 // -----------------------------------------------------------------------------
 //  IllegalArgumentAspect.m
-//  AOPSamples
+//  MGAOP
 //
-//  Created by Manuel Gebele on 25.04.11.
-//  Copyright 2011 TDSoftware GmbH. All rights reserved.
+//  MGAOP is available under *either* the terms of the modified BSD license
+//  *or* the MIT License (2008). See http://opensource.org/licenses/alphabetical
+//  for full text.
+// 
+//  Copyright (c) 2011, Manuel Gebele.
 // -----------------------------------------------------------------------------
 
 #import "IllegalArgumentAspect.h"
