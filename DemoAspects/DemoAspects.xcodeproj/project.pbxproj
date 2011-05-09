@@ -1,0 +1,310 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EC3EA282137708AD009ABDF7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC3EA281137708AD009ABDF7 /* UIKit.framework */; };
+		EC3EA284137708AD009ABDF7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC3EA283137708AD009ABDF7 /* Foundation.framework */; };
+		EC3EA286137708AD009ABDF7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC3EA285137708AD009ABDF7 /* CoreGraphics.framework */; };
+		EC3EA28C137708AD009ABDF7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EC3EA28A137708AD009ABDF7 /* InfoPlist.strings */; };
+		EC3EA28F137708AD009ABDF7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EC3EA28E137708AD009ABDF7 /* main.m */; };
+		EC3EA292137708AD009ABDF7 /* DemoAspectsAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EC3EA291137708AD009ABDF7 /* DemoAspectsAppDelegate.m */; };
+		EC3EA296137708AD009ABDF7 /* DemoAspectsAppDelegate_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = EC3EA295137708AD009ABDF7 /* DemoAspectsAppDelegate_iPhone.m */; };
+		EC3EA299137708AD009ABDF7 /* MainWindow_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC3EA297137708AD009ABDF7 /* MainWindow_iPhone.xib */; };
+		EC3EA29D137708AD009ABDF7 /* DemoAspectsAppDelegate_iPad.m in Sources */ = {isa = PBXBuildFile; fileRef = EC3EA29C137708AD009ABDF7 /* DemoAspectsAppDelegate_iPad.m */; };
+		EC3EA2A0137708AD009ABDF7 /* MainWindow_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC3EA29E137708AD009ABDF7 /* MainWindow_iPad.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EC3EA27D137708AD009ABDF7 /* DemoAspects.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoAspects.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC3EA281137708AD009ABDF7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		EC3EA283137708AD009ABDF7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		EC3EA285137708AD009ABDF7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		EC3EA289137708AD009ABDF7 /* DemoAspects-Info.plist */ = {isa = PBXFileReference; path = "DemoAspects-Info.plist"; sourceTree = "<group>"; };
+		EC3EA28B137708AD009ABDF7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EC3EA28D137708AD009ABDF7 /* DemoAspects-Prefix.pch */ = {isa = PBXFileReference; path = "DemoAspects-Prefix.pch"; sourceTree = "<group>"; };
+		EC3EA28E137708AD009ABDF7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EC3EA290137708AD009ABDF7 /* DemoAspectsAppDelegate.h */ = {isa = PBXFileReference; path = DemoAspectsAppDelegate.h; sourceTree = "<group>"; };
+		EC3EA291137708AD009ABDF7 /* DemoAspectsAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoAspectsAppDelegate.m; sourceTree = "<group>"; };
+		EC3EA294137708AD009ABDF7 /* DemoAspectsAppDelegate_iPhone.h */ = {isa = PBXFileReference; name = DemoAspectsAppDelegate_iPhone.h; path = iPhone/DemoAspectsAppDelegate_iPhone.h; sourceTree = "<group>"; };
+		EC3EA295137708AD009ABDF7 /* DemoAspectsAppDelegate_iPhone.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = DemoAspectsAppDelegate_iPhone.m; path = iPhone/DemoAspectsAppDelegate_iPhone.m; sourceTree = "<group>"; };
+		EC3EA298137708AD009ABDF7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = iPhone/en.lproj/MainWindow_iPhone.xib; sourceTree = "<group>"; };
+		EC3EA29B137708AD009ABDF7 /* DemoAspectsAppDelegate_iPad.h */ = {isa = PBXFileReference; name = DemoAspectsAppDelegate_iPad.h; path = iPad/DemoAspectsAppDelegate_iPad.h; sourceTree = "<group>"; };
+		EC3EA29C137708AD009ABDF7 /* DemoAspectsAppDelegate_iPad.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = DemoAspectsAppDelegate_iPad.m; path = iPad/DemoAspectsAppDelegate_iPad.m; sourceTree = "<group>"; };
+		EC3EA29F137708AD009ABDF7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = iPad/en.lproj/MainWindow_iPad.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EC3EA27A137708AD009ABDF7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC3EA282137708AD009ABDF7 /* UIKit.framework in Frameworks */,
+				EC3EA284137708AD009ABDF7 /* Foundation.framework in Frameworks */,
+				EC3EA286137708AD009ABDF7 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EC3EA272137708AD009ABDF7 = {
+			isa = PBXGroup;
+			children = (
+				EC3EA287137708AD009ABDF7 /* DemoAspects */,
+				EC3EA280137708AD009ABDF7 /* Frameworks */,
+				EC3EA27E137708AD009ABDF7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EC3EA27E137708AD009ABDF7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EC3EA27D137708AD009ABDF7 /* DemoAspects.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EC3EA280137708AD009ABDF7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EC3EA281137708AD009ABDF7 /* UIKit.framework */,
+				EC3EA283137708AD009ABDF7 /* Foundation.framework */,
+				EC3EA285137708AD009ABDF7 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EC3EA287137708AD009ABDF7 /* DemoAspects */ = {
+			isa = PBXGroup;
+			children = (
+				EC3EA290137708AD009ABDF7 /* DemoAspectsAppDelegate.h */,
+				EC3EA291137708AD009ABDF7 /* DemoAspectsAppDelegate.m */,
+				EC3EA293137708AD009ABDF7 /* iPhone */,
+				EC3EA29A137708AD009ABDF7 /* iPad */,
+				EC3EA288137708AD009ABDF7 /* Supporting Files */,
+			);
+			path = DemoAspects;
+			sourceTree = "<group>";
+		};
+		EC3EA288137708AD009ABDF7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EC3EA289137708AD009ABDF7 /* DemoAspects-Info.plist */,
+				EC3EA28A137708AD009ABDF7 /* InfoPlist.strings */,
+				EC3EA28D137708AD009ABDF7 /* DemoAspects-Prefix.pch */,
+				EC3EA28E137708AD009ABDF7 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EC3EA293137708AD009ABDF7 /* iPhone */ = {
+			isa = PBXGroup;
+			children = (
+				EC3EA294137708AD009ABDF7 /* DemoAspectsAppDelegate_iPhone.h */,
+				EC3EA295137708AD009ABDF7 /* DemoAspectsAppDelegate_iPhone.m */,
+				EC3EA297137708AD009ABDF7 /* MainWindow_iPhone.xib */,
+			);
+			name = iPhone;
+			sourceTree = "<group>";
+		};
+		EC3EA29A137708AD009ABDF7 /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+				EC3EA29B137708AD009ABDF7 /* DemoAspectsAppDelegate_iPad.h */,
+				EC3EA29C137708AD009ABDF7 /* DemoAspectsAppDelegate_iPad.m */,
+				EC3EA29E137708AD009ABDF7 /* MainWindow_iPad.xib */,
+			);
+			name = iPad;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EC3EA27C137708AD009ABDF7 /* DemoAspects */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC3EA2A3137708AD009ABDF7 /* Build configuration list for PBXNativeTarget "DemoAspects" */;
+			buildPhases = (
+				EC3EA279137708AD009ABDF7 /* Sources */,
+				EC3EA27A137708AD009ABDF7 /* Frameworks */,
+				EC3EA27B137708AD009ABDF7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DemoAspects;
+			productName = DemoAspects;
+			productReference = EC3EA27D137708AD009ABDF7 /* DemoAspects.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EC3EA274137708AD009ABDF7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "TDSoftware GmbH";
+			};
+			buildConfigurationList = EC3EA277137708AD009ABDF7 /* Build configuration list for PBXProject "DemoAspects" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = EC3EA272137708AD009ABDF7;
+			productRefGroup = EC3EA27E137708AD009ABDF7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EC3EA27C137708AD009ABDF7 /* DemoAspects */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EC3EA27B137708AD009ABDF7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC3EA28C137708AD009ABDF7 /* InfoPlist.strings in Resources */,
+				EC3EA299137708AD009ABDF7 /* MainWindow_iPhone.xib in Resources */,
+				EC3EA2A0137708AD009ABDF7 /* MainWindow_iPad.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EC3EA279137708AD009ABDF7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC3EA28F137708AD009ABDF7 /* main.m in Sources */,
+				EC3EA292137708AD009ABDF7 /* DemoAspectsAppDelegate.m in Sources */,
+				EC3EA296137708AD009ABDF7 /* DemoAspectsAppDelegate_iPhone.m in Sources */,
+				EC3EA29D137708AD009ABDF7 /* DemoAspectsAppDelegate_iPad.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EC3EA28A137708AD009ABDF7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC3EA28B137708AD009ABDF7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		EC3EA297137708AD009ABDF7 /* MainWindow_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC3EA298137708AD009ABDF7 /* en */,
+			);
+			name = MainWindow_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		EC3EA29E137708AD009ABDF7 /* MainWindow_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC3EA29F137708AD009ABDF7 /* en */,
+			);
+			name = MainWindow_iPad.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EC3EA2A1137708AD009ABDF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EC3EA2A2137708AD009ABDF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EC3EA2A4137708AD009ABDF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DemoAspects/DemoAspects-Prefix.pch";
+				INFOPLIST_FILE = "DemoAspects/DemoAspects-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		EC3EA2A5137708AD009ABDF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DemoAspects/DemoAspects-Prefix.pch";
+				INFOPLIST_FILE = "DemoAspects/DemoAspects-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EC3EA277137708AD009ABDF7 /* Build configuration list for PBXProject "DemoAspects" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC3EA2A1137708AD009ABDF7 /* Debug */,
+				EC3EA2A2137708AD009ABDF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC3EA2A3137708AD009ABDF7 /* Build configuration list for PBXNativeTarget "DemoAspects" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC3EA2A4137708AD009ABDF7 /* Debug */,
+				EC3EA2A5137708AD009ABDF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EC3EA274137708AD009ABDF7 /* Project object */;
+}
