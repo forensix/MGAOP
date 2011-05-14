@@ -18,11 +18,6 @@
 #define INTERCEPTOR_IMPLEMENTATION_KEY @"INTERCEPTOR_IMPLEMENTATION_KEY"
 #define INTERCEPTOR_ADVICE_KEY         @"INTERCEPTOR_ADVICE_KEY"
 
-typedef struct  { uint8_t bytes[ 32]; } CallFrame040;
-typedef struct  { uint8_t bytes[ 64]; } CallFrame072;
-typedef struct  { uint8_t bytes[ 96]; } CallFrame104;
-typedef struct  { uint8_t bytes[128]; } CallFrame136;
-
 @implementation AOPInterceptor
 
 // -----------------------------------------------------------------------------
@@ -151,6 +146,115 @@ typedef struct  { uint8_t bytes[128]; } CallFrame136;
 // -----------------------------------------------------------------------------
 
 
+void *call_original(IMP imp, id receiver, SEL receiver_selector,
+                    va_list stack_frame, bool has_retval)
+{
+    void *retval = NULL;
+    
+    NSMethodSignature *signature
+    = [receiver methodSignatureForSelector:receiver_selector];
+    
+    NSUInteger frameLength = [signature frameLength];
+    if (frameLength == 8 && !has_retval)
+    {
+        imp(receiver, receiver_selector);
+        
+        goto done;
+    }
+    if (frameLength == 8 && has_retval)
+    {
+        retval = (void *)imp(receiver, receiver_selector);
+        
+        goto done;
+    }
+    
+    typedef struct
+    {
+        uint8_t bytes[32];
+    } FRAME32;
+    
+    typedef struct
+    {
+        uint8_t bytes[64];
+    } FRAME64;
+    
+    typedef struct
+    {
+        uint8_t bytes[96];
+    } FRAME96;
+    
+    typedef struct
+    {
+        uint8_t bytes[128];
+    } FRAME128;
+    
+
+    if (frameLength <= 40)
+    {
+        FRAME32 frame = va_arg(stack_frame, FRAME32);
+        if (has_retval)
+        {
+            retval = (void *)imp(receiver, receiver_selector, frame);
+        }
+        else
+        {
+            imp(receiver, receiver_selector, frame);
+        }
+    }
+    else if (frameLength <= 72)
+    {
+        FRAME64 frame = va_arg(stack_frame, FRAME64);
+        if (has_retval)
+        {
+            retval = (void *)imp(receiver, receiver_selector, frame);
+        }
+        else
+        {
+            imp(receiver, receiver_selector, frame);
+        }
+    }
+    else if (frameLength <= 104)
+    {
+        FRAME96 frame = va_arg(stack_frame, FRAME96);
+        if (has_retval)
+        {
+            retval = (void *)imp(receiver, receiver_selector, frame);
+        }
+        else
+        {
+            imp(receiver, receiver_selector, frame);
+        }
+    }
+    else if (frameLength <= 136)
+    {
+        FRAME128 frame = va_arg(stack_frame, FRAME128);
+        if (has_retval)
+        {
+            retval = (void *)imp(receiver, receiver_selector, frame);
+        }
+        else
+        {
+            imp(receiver, receiver_selector, frame);
+        }
+    }
+    else
+    {
+        NSString *identifier
+        = [NSString stringWithFormat:@"%@:%@",
+           NSStringFromClass([receiver class]),
+           NSStringFromSelector(receiver_selector)];
+        id obj = [AOPInterceptor sharedInterceptor];
+        [obj printErrorThatIllegalFrameLengthWasFoundForIdentifier:identifier];
+        goto done;
+    }
+    
+    va_end(stack_frame);
+
+done:
+    return retval;
+}
+
+
 - (NSDictionary *)implementationDictionaryForKey:(NSString *)key
 {
     return [_storedImplementations objectForKey:key];
@@ -159,133 +263,9 @@ typedef struct  { uint8_t bytes[128]; } CallFrame136;
 
 void voidEntryPoint(id self, SEL _cmd, ...)
 {
-    /*
-     * Note:
-     * self -> receiver _cmd -> receiver selector
-     */
-    id receiver = self;
-    SEL receiverSelector = _cmd;
-
-    /*
-     * Note:
-     * self -> self _cmd -> newEntryPoint
-     */
-    self = [AOPInterceptor sharedInterceptor];
-    _cmd = @selector(newEntryPoint);
-    
-    va_list stackFrame;
-	va_start(stackFrame, _cmd );
-    
-    NSArray *arguments =
-    [self catchArgumentsForReceiver:receiver
-                       withSelector:receiverSelector
-                         stackFrame:stackFrame];
-    
-    NSString *identifier // Implicit dependency!
-    = [NSString stringWithFormat:@"%@:%@",
-       NSStringFromClass([receiver class]),
-       NSStringFromSelector(receiverSelector)];
-    
-    NSDictionary *implementationDictionary
-    = [self implementationDictionaryForKey:identifier];
-    
-    NSValue *implementationAsValue
-    = [implementationDictionary objectForKey:INTERCEPTOR_IMPLEMENTATION_KEY];
-    
-    IMP implementation;
-    [implementationAsValue getValue:&implementation];
-    
-    AOPAdvice *advice
-    = [implementationDictionary objectForKey:INTERCEPTOR_ADVICE_KEY];
-
-// -----------------------------------------------------------------------------
-#pragma mark Before
-    [advice performAdviceWithType:kAOPAdviceTypeBeforeExecution
-                     arguments:arguments identifier:identifier];
-// -----------------------------------------------------------------------------
-
-    NSMethodSignature *signature
-    = [receiver methodSignatureForSelector:receiverSelector];
-
-    NSUInteger frameLength = [signature frameLength];
-
-// -----------------------------------------------------------------------------
-#pragma mark Instead
-    BOOL shouldPerformInstead
-    = [advice shouldPerformInstead];
-    
-    if (shouldPerformInstead)
-    {
-        [advice performAdviceWithType:kAOPAdviceTypeInsteadExecution
-                            arguments:arguments identifier:identifier];
-        goto after;
-    }
-    
-// -----------------------------------------------------------------------------
-    
-// -----------------------------------------------------------------------------
-#pragma mark Original
-    /*
-     * Note:
-     * Borrowed by Amin =)
-     */
-    if (frameLength == 8)
-    {
-        implementation(receiver, receiverSelector);
-    }
-    else if (frameLength <= 40)
-    {
-        CallFrame040 frame = va_arg(stackFrame, CallFrame040);
-        va_end(stackFrame);
-        implementation(receiver, receiverSelector, frame); 
-    }
-    else if (frameLength <= 72)
-    {
-        CallFrame072 frame = va_arg(stackFrame, CallFrame072);
-        va_end(stackFrame);
-        implementation(receiver, receiverSelector, frame); 
-    }
-    else if (frameLength <= 104)
-    {
-        CallFrame104 frame = va_arg(stackFrame, CallFrame104);
-        va_end(stackFrame);
-        implementation(receiver, receiverSelector, frame); 
-    }
-    else if (frameLength <= 136)
-    {
-        CallFrame136 frame = va_arg(stackFrame, CallFrame136);
-        va_end(stackFrame);
-        implementation(receiver, receiverSelector, frame); 
-    }
-    else
-    {
-        [self printErrorThatIllegalFrameLengthWasFoundForIdentifier:identifier];
-    }
-// -----------------------------------------------------------------------------
-
-after:
-// -----------------------------------------------------------------------------
-#pragma mark After    
-    [advice performAdviceWithType:kAOPAdviceTypeAfterExecution
-                        arguments:arguments identifier:identifier];
-// -----------------------------------------------------------------------------
-}
-
-
-void *returnEntryPoint(id self, SEL _cmd, ...)
-{
-    void *retVal = NULL;
-    /*
-     * Note:
-     * self -> receiver _cmd -> receiver selector
-     */
     id receiver = self;
     SEL receiverSelector = _cmd;
     
-    /*
-     * Note:
-     * self -> self _cmd -> newEntryPoint
-     */
     self = [AOPInterceptor sharedInterceptor];
     _cmd = @selector(newEntryPoint);
     
@@ -308,8 +288,79 @@ void *returnEntryPoint(id self, SEL _cmd, ...)
     NSValue *implementationAsValue
     = [implementationDictionary objectForKey:INTERCEPTOR_IMPLEMENTATION_KEY];
     
-    IMP implementation;
-    [implementationAsValue getValue:&implementation];
+    IMP imp;
+    [implementationAsValue getValue:&imp];
+    
+    AOPAdvice *advice
+    = [implementationDictionary objectForKey:INTERCEPTOR_ADVICE_KEY];
+
+// -----------------------------------------------------------------------------
+#pragma mark Before
+    [advice performAdviceWithType:kAOPAdviceTypeBeforeExecution
+                     arguments:arguments identifier:identifier];
+// -----------------------------------------------------------------------------
+
+// -----------------------------------------------------------------------------
+#pragma mark Instead
+    BOOL shouldPerformInstead
+    = [advice shouldPerformInstead];
+    
+    if (shouldPerformInstead)
+    {
+        [advice performAdviceWithType:kAOPAdviceTypeInsteadExecution
+                            arguments:arguments identifier:identifier];
+        goto after;
+    }
+    
+// -----------------------------------------------------------------------------
+    
+// -----------------------------------------------------------------------------
+#pragma mark Original
+
+    (void)call_original(imp, receiver, receiverSelector, stackFrame, false);
+    
+// -----------------------------------------------------------------------------
+
+after:
+// -----------------------------------------------------------------------------
+#pragma mark After    
+    [advice performAdviceWithType:kAOPAdviceTypeAfterExecution
+                        arguments:arguments identifier:identifier];
+// -----------------------------------------------------------------------------
+}
+
+
+void *returnEntryPoint(id self, SEL _cmd, ...)
+{
+    void *retVal = NULL;
+
+    id receiver = self;
+    SEL receiverSelector = _cmd;
+
+    self = [AOPInterceptor sharedInterceptor];
+    _cmd = @selector(newEntryPoint);
+    
+    va_list stackFrame;
+	va_start(stackFrame, _cmd );
+    
+    NSArray *arguments =
+    [self catchArgumentsForReceiver:receiver
+                       withSelector:receiverSelector
+                         stackFrame:stackFrame];
+
+    NSString *identifier
+    = [NSString stringWithFormat:@"%@:%@",
+       NSStringFromClass([receiver class]),
+       NSStringFromSelector(receiverSelector)];
+    
+    NSDictionary *implementationDictionary
+    = [self implementationDictionaryForKey:identifier];
+    
+    NSValue *implementationAsValue
+    = [implementationDictionary objectForKey:INTERCEPTOR_IMPLEMENTATION_KEY];
+    
+    IMP imp;
+    [implementationAsValue getValue:&imp];
     
     AOPAdvice *advice
     = [implementationDictionary objectForKey:INTERCEPTOR_ADVICE_KEY];
@@ -319,11 +370,6 @@ void *returnEntryPoint(id self, SEL _cmd, ...)
     [advice performAdviceWithType:kAOPAdviceTypeBeforeExecution
                         arguments:arguments identifier:identifier];
 // -----------------------------------------------------------------------------
-    
-    NSMethodSignature *signature
-    = [receiver methodSignatureForSelector:receiverSelector];
-    
-    NSUInteger frameLength = [signature frameLength];
     
 // -----------------------------------------------------------------------------
 #pragma mark Instead
@@ -350,38 +396,9 @@ void *returnEntryPoint(id self, SEL _cmd, ...)
     
 // -----------------------------------------------------------------------------
 #pragma mark Original
-    if (frameLength == 8)
-    {
-        retVal = (void*)implementation(receiver, receiverSelector);
-    }
-    else if (frameLength <= 40)
-    {
-        CallFrame040 frame = va_arg(stackFrame, CallFrame040);
-        va_end(stackFrame);
-        retVal = (void*)implementation(receiver, receiverSelector, frame); 
-    }
-    else if (frameLength <= 72)
-    {
-        CallFrame072 frame = va_arg(stackFrame, CallFrame072);
-        va_end(stackFrame);
-        retVal = (void*)implementation(receiver, receiverSelector, frame); 
-    }
-    else if (frameLength <= 104)
-    {
-        CallFrame104 frame = va_arg(stackFrame, CallFrame104);
-        va_end(stackFrame);
-        retVal = (void*)implementation(receiver, receiverSelector, frame); 
-    }
-    else if (frameLength <= 136)
-    {
-        CallFrame136 frame = va_arg(stackFrame, CallFrame136);
-        va_end(stackFrame);
-        retVal = (void*)implementation(receiver, receiverSelector, frame); 
-    }
-    else
-    {
-        [self printErrorThatIllegalFrameLengthWasFoundForIdentifier:identifier];
-    }
+
+    retVal = call_original(imp, receiver, receiverSelector, stackFrame, false);
+
 // -----------------------------------------------------------------------------
 
 after:
@@ -401,7 +418,7 @@ after:
 
 
 - (void)registerJoinpoint:(AOPJoinpoint *)joinpoint
-               withAdvice:(AOPAdvice *)advice
+                forAdvice:(AOPAdvice *)advice
 {
     NSString *identifier
     = [NSString stringWithFormat:@"%@:%@",

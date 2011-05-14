@@ -783,7 +783,7 @@ next:
     
     for (AOPJoinpoint *joinpoint in joinpoints)
     {
-        [interceptor registerJoinpoint:joinpoint withAdvice:advice];
+        [interceptor registerJoinpoint:joinpoint forAdvice:advice];
     }
 }
 

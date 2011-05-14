@@ -24,6 +24,6 @@
 + (AOPInterceptor *)sharedInterceptor;
 
 - (void)registerJoinpoint:(AOPJoinpoint *)joinpoint
-               withAdvice:(AOPAdvice *)advice;
+                forAdvice:(AOPAdvice *)advice;
 
 @end
